@@ -1,0 +1,42 @@
+{
+  "name": "Todoist Gmail Sidebar",
+	"manifest_version": 2,
+	"description": "Toggle a Todoist sidebar on the gmail tabs when the page action is clicked",
+	"version": "0.9",
+	"homepage_url": "http://turkeyphant.org",
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "permissions": [ "tabs",
+    "https://*/*","http://*/*","activeTab"
+  ],
+  "background":{
+    "persistent":true,
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_icon": "icon128.png",
+     "default_title": "Toggle Todoist sidebar"
+  },
+    "content_scripts": [
+        {
+          "js": [
+        "jquery.min.js",
+        "jquery.easing.1.3.js",
+        "contentscript.js"
+            ],
+            "matches": [
+        "*://mail.google.com/*"
+        //"http://*/*",
+        //"https://*/*"    
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "web_accessible_resources": [
+        "frame.html",
+        "toggleSidebar.js"
+    ]
+}
