@@ -9,3 +9,6 @@ To do
 * Make the icon change on a per-tab basis to show whether the sidebar is active or not
 * Throw a popup when the button is clicked on non-active URLs
 * Work out how to make a working version of the splitter-version demo and merge into the project
+* Fix OS X issue where html element is not automatically resized
+* Find a way to ensure scrollbars are correctly positioned for all sites
+* Optimise for smooth jquery animations
