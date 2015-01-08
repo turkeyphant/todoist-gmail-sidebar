@@ -12,3 +12,4 @@ To do
 * Fix OS X issue where html element is not automatically resized
 * Find a way to ensure scrollbars are correctly positioned for all sites
 * Optimise for smooth jquery animations
+* investigate potential frame focus and overscrolling issues
